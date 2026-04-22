@@ -1,0 +1,186 @@
+/* Mobile-First Optimized CSS for SPI Mobile Folder */
+@import './07_style.css'; 
+
+/* Root Overrides for Mobile Experience */
+:root {
+  --mobile-padding: 24px;
+}
+
+/* Base Mobile Reset */
+body {
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+/* Header & Hamburger Menu */
+.navbar {
+  padding: 16px var(--mobile-padding);
+  background: rgba(0,0,0,0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.menu {
+  display: none; /* Hide desktop menu on mobile */
+}
+
+/* Modern Hamburger Icon */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: pointer;
+  z-index: 2001;
+  padding: 10px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Fullscreen Menu Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: center;
+}
+
+.mobile-menu-links a {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+}
+
+.mobile-menu-overlay.active .mobile-menu-links a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-menu-links a span {
+  color: var(--accent-amber);
+}
+
+/* Hero Section Optimizations */
+.hero-title {
+  font-size: 3.2rem !important; /* Scaled down for mobile */
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem !important;
+  max-width: 280px;
+  margin: 20px auto 0 auto;
+}
+
+/* Trust Banner Mobile */
+.trust-banner {
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px var(--mobile-padding);
+}
+
+.trust-value {
+  font-size: 2.5rem;
+}
+
+/* Feature Sections Mobile */
+.feature-section {
+  flex-direction: column !important;
+  text-align: center;
+  padding: 80px var(--mobile-padding);
+}
+
+.feature-image-wrapper {
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.feature-text {
+  max-width: 100%;
+}
+
+.title {
+  font-size: 2.4rem !important;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.05rem;
+}
+
+/* Modal for Mobile */
+.modal-content {
+  width: 95%;
+  padding: 30px 20px;
+}
+
+#modal-title {
+  font-size: 1.6rem;
+}
+
+/* Footer Mobile */
+.pro-footer {
+  padding: 60px var(--mobile-padding);
+}
+
+.floating-actions {
+  bottom: 20px;
+  right: 20px;
+}
+
+.floating-btn {
+  padding: 12px;
+}
+
+.wa-text {
+  display: none !important; /* Too cramped on small mobile */
+}
+
+/* Extra Mobile Spacing Fixes */
+.section-divider {
+  width: 100%;
+  opacity: 0.3;
+}

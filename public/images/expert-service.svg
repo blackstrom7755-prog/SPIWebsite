@@ -1,0 +1,30 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#grad3)"/>
+  
+  <!-- Service/maintenance illustration -->
+  <g transform="translate(120, 70)">
+    <!-- Wrench -->
+    <rect x="40" y="120" width="80" height="12" fill="#FF6600" opacity="0.8" rx="6" transform="rotate(-30 80 126)"/>
+    <circle cx="45" cy="100" r="12" fill="#FF6600" opacity="0.8"/>
+    
+    <!-- Machine outline -->
+    <rect x="20" y="30" width="140" height="90" fill="none" stroke="#FF6600" stroke-width="3" opacity="0.7" rx="5"/>
+    <circle cx="50" cy="70" r="8" fill="#FF6600" opacity="0.6"/>
+    <circle cx="130" cy="70" r="8" fill="#FF6600" opacity="0.6"/>
+    
+    <!-- Service check marks -->
+    <g transform="translate(160, 50)">
+      <line x1="0" y1="0" x2="8" y2="8" stroke="#00AA44" stroke-width="2"/>
+      <line x1="8" y1="8" x2="20" y2="0" stroke="#00AA44" stroke-width="2"/>
+      
+      <line x1="0" y1="25" x2="8" y2="33" stroke="#00AA44" stroke-width="2"/>
+      <line x1="8" y1="33" x2="20" y2="25" stroke="#00AA44" stroke-width="2"/>
+    </g>
+  </g>
+</svg>
